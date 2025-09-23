@@ -2,7 +2,7 @@
 {
     public partial class MainPage : ContentPage
     {
-        //int count = 0;
+        double valorfinal;
 
         public MainPage()
         {
@@ -10,13 +10,13 @@
             //ValorTotalEntry.Text = "0";
             PorcentagemSlider.Value = 17;
 
-
         }
 
 
         private void ArredondaCimaBtn_Clicked(object sender, EventArgs e)
         {
-
+            double cima = Math.Ceiling(valorfinal);
+            ValorFinalLabel.Text = $"R${cima}";
         }
 
         private void Porcentagem15Btn_Clicked(object sender, EventArgs e)
@@ -31,7 +31,8 @@
 
         private void ArredondaBaixoBtn_Clicked(object sender, EventArgs e)
         {
-
+            double baixo = Math.Floor(valorfinal);
+            ValorFinalLabel.Text = $"R$ {baixo}";
         }
 
         private void PorcentagemSlider_ValueChanged(object sender, ValueChangedEventArgs e)
@@ -53,9 +54,9 @@
                 //correta moeda de acordo com as configuracoes do sistema operacional e 
                 //alem disso faz a aproximação sempre para duas casas decimais porque 
                 //sabe que estamos trabalhando valores monetarios
-                ValorGorjetaLabel.Text = Math.Floor(gorjeta.ToString("c"));
-                ValorFinalLabel.Text = Math.Ceiling(valorfinal.ToString("c");
-                //ValorFinalLabel.Text = $"R$ {valorfinal}";
+                ValorGorjetaLabel.Text = Math.Floor(gorjeta).ToString();
+                ValorFinalLabel.Text = Math.Ceiling(gorjeta).ToString();
+                ValorFinalLabel.Text = $"R$ {valorfinal}";
             }
             catch (Exception ex)
             {
