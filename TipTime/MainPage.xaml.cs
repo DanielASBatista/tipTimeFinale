@@ -2,21 +2,24 @@
 {
     public partial class MainPage : ContentPage
     {
-        double valorfinal;
+        double valorfinal; // Variável da classe, armazenando o valor com gorjeta
 
         public MainPage()
         {
             InitializeComponent();
-            //ValorTotalEntry.Text = "0";
-            PorcentagemSlider.Value = 17;
-
+            PorcentagemSlider.Value = 17; // Valor inicial do slider
         }
-
 
         private void ArredondaCimaBtn_Clicked(object sender, EventArgs e)
         {
             double cima = Math.Ceiling(valorfinal);
-            ValorFinalLabel.Text = $"R${cima}";
+            ValorFinalLabel.Text = $"R$ {cima:F2}";
+        }
+
+        private void ArredondaBaixoBtn_Clicked(object sender, EventArgs e)
+        {
+            double baixo = Math.Floor(valorfinal);
+            ValorFinalLabel.Text = $"R$ {baixo:F2}";
         }
 
         private void Porcentagem15Btn_Clicked(object sender, EventArgs e)
@@ -26,50 +29,39 @@
 
         private void Porcentagem20Btn_Clicked(object sender, EventArgs e)
         {
-            PorcentagemSlider.Value = 20;            
-        }
-
-        private void ArredondaBaixoBtn_Clicked(object sender, EventArgs e)
-        {
-            double baixo = Math.Floor(valorfinal);
-            ValorFinalLabel.Text = $"R$ {baixo}";
+            PorcentagemSlider.Value = 20;
         }
 
         private void PorcentagemSlider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            try 
+            try
             {
                 double porcentagem = PorcentagemSlider.Value;
                 PorcentagemGorjetalLabel.Text = $"{porcentagem}%";
-                //double gorjeta;
-                double valortotal = double.Parse(ValorTotalEntry.Text);
-                //double valortotal = Convert.ToDouble(ValorTotalEntry.Text);
-                //Convert e uma classe
-                double gorjeta = valortotal * (porcentagem / 100);
-                double valorfinal = valortotal + gorjeta;
-                //estamos interpolando uma varíavel que tem conteudo numero em uma string
-                //ValorGorjetaLabel.Text = $"R$ {gorjeta}";
-                //O recurso de cima não é muito bom
-                //O recurso debaixo é melhor porque o caracter c entre aspas determina a 
-                //correta moeda de acordo com as configuracoes do sistema operacional e 
-                //alem disso faz a aproximação sempre para duas casas decimais porque 
-                //sabe que estamos trabalhando valores monetarios
-                ValorGorjetaLabel.Text = Math.Floor(gorjeta).ToString();
-                ValorFinalLabel.Text = Math.Ceiling(gorjeta).ToString();
-                ValorFinalLabel.Text = $"R$ {valorfinal}";
+
+                // Lê o valor digitado pelo usuário
+                if (double.TryParse(ValorTotalEntry.Text, out double valortotal))
+                {
+                    double gorjeta = valortotal * (porcentagem / 100);
+                    this.valorfinal = valortotal + gorjeta; // Salva no campo da classe
+
+                    // Atualiza os rótulos com formatação
+                    ValorGorjetaLabel.Text = $"R$ {gorjeta:F2}";
+                    ValorFinalLabel.Text = $"R$ {this.valorfinal:F2}";
+                }
+                else
+                {
+                    // Se o valor digitado for inválido
+                    ValorGorjetaLabel.Text = "Valor inválido";
+                    ValorFinalLabel.Text = "";
+                }
             }
             catch (Exception ex)
             {
-                //Toda vez que uso o comando Console.WriteLine a saída vai para a 
-                //console na aba Output
                 Console.WriteLine(ex.ToString());
-                //O Alert não e eficiente pois quebra a navegação do usuario
-                //DisplayAlert("Erro", "Digite um valor numerico", "OK");
-
+                ValorGorjetaLabel.Text = "Erro ao calcular";
+                ValorFinalLabel.Text = "";
             }
-
-
         }
     }
-
 }
