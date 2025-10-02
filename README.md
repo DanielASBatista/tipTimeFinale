@@ -1,4 +1,4 @@
-Daniel Alves dos Santos Batista - RM:251376 <br>
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5929b26e-df08-4d99-8212-954a7d8ea4f8" />Daniel Alves dos Santos Batista - RM:251376 <br>
 
 
 Aplicação de calculo de gorjetas<br>
@@ -36,6 +36,13 @@ Arredondamento da gorjeta pra baixo<br>
 
 
 <img width="1065" height="889" alt="baixo" src="https://github.com/user-attachments/assets/b7bfb02c-2b67-4de5-847a-d7b5e056c34e" /><br>
+
+
+Página com botão que direciona ao repositorio<br>
+
+
+<img width="1065" height="891" alt="repo" src="https://github.com/user-attachments/assets/cbe709c1-afc0-441b-adfc-e5ccb4ca6e51" />
+
 
 
 
