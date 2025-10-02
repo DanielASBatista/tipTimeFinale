@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5929b26e-df08-4d99-8212-954a7d8ea4f8" />Daniel Alves dos Santos Batista - RM:251376 <br>
+Daniel Alves dos Santos Batista - RM:251376 <br>
 
 
 Aplicação de calculo de gorjetas<br>
