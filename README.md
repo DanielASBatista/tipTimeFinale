@@ -1,36 +1,41 @@
-Daniel Alves dos Santos Batista - RM:251376
+Daniel Alves dos Santos Batista - RM:251376 <br>
 
 
-Aplicação de calculo de gorjetas
+Aplicação de calculo de gorjetas<br>
 
 
-Tela inicial do projeto
+Tela inicial do projeto<br>
 
 
-<img width="1891" height="991" alt="gorjetaInicial" src="https://github.com/user-attachments/assets/1e7cc6fd-0050-46c2-8326-e2113e589b93" />
+<img width="1069" height="888" alt="inicial" src="https://github.com/user-attachments/assets/49b46273-7813-41fe-8574-2ad438b6f239" /><br>
 
 
-Calculo com 15% de gorjeta
+
+Calculo com 15% de gorjeta<br>
 
 
-<img width="1909" height="851" alt="gorjeta15" src="https://github.com/user-attachments/assets/fd4f8e7e-3822-41ba-ad35-149114beae89" />
+<img width="1069" height="895" alt="quinze" src="https://github.com/user-attachments/assets/6d02a26a-ed7c-4f6a-814f-13b8c633eb40" /><br>
 
 
-Calculo com 20% de gorjeta 
+
+Calculo com 20% de gorjeta <br>
 
 
-<img width="1894" height="842" alt="gorjeta20" src="https://github.com/user-attachments/assets/c410972e-3126-4591-b0c6-9b50b8dbeac5" />
+<img width="1069" height="895" alt="vinte" src="https://github.com/user-attachments/assets/d8c7cc5b-70b8-45c2-88bc-323b053448de" /><br>
 
 
-Arredondamento da gorjeta pra cima 
+
+Arredondamento da gorjeta pra cima <br>
 
 
-<img width="1895" height="847" alt="redondCima" src="https://github.com/user-attachments/assets/bbdaa8f9-bdfd-4cd3-951b-baf5db2cdc35" />
+<img width="1063" height="891" alt="cima" src="https://github.com/user-attachments/assets/e26f9a81-6d75-4f8b-bdd4-4ed83f3c9cf3" /><br>
 
 
-Arredondamento da gorjeta pra baixo
+
+Arredondamento da gorjeta pra baixo<br>
 
 
-<img width="1891" height="843" alt="recondBaixo" src="https://github.com/user-attachments/assets/88e0e4b0-12ed-48ac-98cc-0410beff3e6f" />
+<img width="1065" height="889" alt="baixo" src="https://github.com/user-attachments/assets/b7bfb02c-2b67-4de5-847a-d7b5e056c34e" /><br>
+
 
 
