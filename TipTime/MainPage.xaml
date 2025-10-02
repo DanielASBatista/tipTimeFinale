@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TipTime.MainPage">
+             x:Class="TipTime.MainPage"
+             BackgroundColor="LightGrey">
 
     <ScrollView>
         <VerticalStackLayout
@@ -11,7 +12,8 @@
                 Text="Valor"/>
             <Entry
                 x:Name="ValorTotalEntry"
-                Placeholder="Digite o valor total"/>
+                Placeholder="Digite o valor total"
+                PlaceholderColor="black"/>
             <Label
                 Text="Gorjeta"/>
             <Label
@@ -27,7 +29,7 @@
             <Label
                 x:Name="PorcentagemGorjetalLabel"
                 Text="15%"/>
-            <Slider Maximum="100" Minimum="0" Value="15"
+            <Slider Maximum="100" Minimum="0" Value="15" MaximumTrackColor="DarkGrey"
                 x:Name="PorcentagemSlider"    
                 ValueChanged="PorcentagemSlider_ValueChanged"/>
             <Button
